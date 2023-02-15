@@ -1,5 +1,6 @@
 .panels {
   min-height: 100vh;
+  display: flex;
 }
 
 .panel {
@@ -10,6 +11,20 @@
   font-size: 20px;
   background-size: cover;
   background-position: center;
+  flex-grow: 1;
+  display: flex;
+  text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.panel>*:last-child {
+  transform: translateY(+50vh);
+}
+
+.panel>*:first-child {
+  transform: translateY(-50vh);
 }
 
 .panel1 { background-image:url(https://images.unsplash.com/photo-1627453999411-dd9c2604c109?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2874&q=80); }
@@ -24,3 +39,29 @@
   font-size: 2em;
   transition : 0.5s;
 }
+
+    .panel.open {
+      flex-grow: 5;
+      font-size: 40px;
+    }
+  
+    .panel>*:first-child {
+      /* For the Top element */
+      transform: translateY(-100vh);
+    }
+  
+    .panel.open-active>*:first-child {
+      /* For the Top element */
+      transform: translateY(0);
+    }
+  
+    .panel>*:last-child {
+      /* For the Bottom element */
+      transform: translateY(+100vh);
+    }
+  
+    .panel.open-active>*:last-child {
+      /* For the Bottom element */
+      transform: translateY(0);
+    }
+  
