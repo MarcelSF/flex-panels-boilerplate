@@ -47,7 +47,7 @@
   
     .panel>*:first-child {
       /* For the Top element */
-      transform: translateY(-100vh);
+      transform: translateY(-50vh);
     }
   
     .panel.open-active>*:first-child {
@@ -57,7 +57,7 @@
   
     .panel>*:last-child {
       /* For the Bottom element */
-      transform: translateY(+100vh);
+      transform: translateY(+50vh);
     }
   
     .panel.open-active>*:last-child {
